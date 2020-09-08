@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navigation_paylasimlar"
+        android:title="Favoriler"
+        android:icon="@drawable/ic_bookmark_white"/>
+
+    <item
+        android:id="@+id/navigation_kisiler"
+        android:icon="@drawable/ic_arksayi"
+        android:title="Kişiler" />
+</menu>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/acikkrem">
+
+    <EditText
+        android:id="@+id/kisiler_arama_text"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_margin="3dp"
+        android:background="@color/beyaz"
+        android:hint="Ara..."
+        android:textColorHint="@color/gri"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:drawableStart="@drawable/ic_search_gri"
+        android:textColor="@color/siyah"
+        android:drawablePadding="10dp" />
+
+    <LinearLayout
+        android:id="@+id/aramadadevreyegirer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/kisiler_arama_text"
+        android:gravity="center"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:padding="10dp"
+        android:background="@color/beyaz"
+        android:visibility="gone">
+
+        <com.wang.avi.AVLoadingIndicatorView
+            android:id="@+id/progress_kisi_araniyor"
+            style="@style/AVLoadingIndicatorView"
+            app:indicatorName="BallTrianglePathIndicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:indicatorColor="@color/gri" />
+
+        <EditText
+            android:id="@+id/kisi_aranıyor_text"
+            android:layout_margin="5dp"
+            android:layout_width="match_parent"
+            android:background="@color/beyaz"
+            android:layout_height="wrap_content"
+            android:textColor="@color/gri"/>
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/listtumkullanicilar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/kisiler_arama_text"
+        android:padding="1dp"
+        android:scrollbarSize="3dp"
+        android:scrollbarThumbVertical="@color/sarı"
+        android:scrollbars="vertical" />
+
+    <TextView
+        android:id="@+id/henuzkullaniciyok"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Henüz Hiç Kullanıcı Yok !"
+        android:textColor="@color/siyah"
+        android:background="@color/acikkrem"
+        android:layout_centerInParent="true"
+        android:visibility="gone"/>
+
+</RelativeLayout>

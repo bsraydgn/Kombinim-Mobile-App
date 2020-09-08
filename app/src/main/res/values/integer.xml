@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="sifreustsinir">15</integer>
+    <integer name="emailustsinir">100</integer>
+    <integer name="kullaniciadiustsinir">50</integer>
+    <integer name="durumustsınır">100</integer>
+    <integer name="mesajustsinir">100</integer>
+    <integer name="slide_animation_duration">300</integer>
+    <integer name="hakkimda">200</integer>
+    <integer name="yorumsinir">200</integer>
+    <integer name="kombinaciklama">250</integer>
+    <integer name="raporsebebi">150</integer>
+    <integer name="linkuzunlugu">300</integer>
+    <integer name="magazaadi">50</integer>
+    <integer name="yardimuzunlugu">500</integer>
+</resources>

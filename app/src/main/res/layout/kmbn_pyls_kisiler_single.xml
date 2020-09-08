@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="5dp"
+    android:background="@drawable/onlybottom"
+    android:layout_marginBottom="1dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/kp_image"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_centerVertical="true" />
+
+    <TextView
+        android:id="@+id/kp_username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="7dp"
+        android:layout_marginEnd="7dp"
+        android:layout_toEndOf="@+id/kp_image"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text=""
+        android:textColor="@color/siyah"
+        android:layout_centerVertical="true"
+        android:layout_toStartOf="@id/kp_gonder"/>
+
+    <ToggleButton
+        android:id="@+id/kp_gonder"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:textAllCaps="false"
+        android:textSize="12sp"
+        android:background="@drawable/buton_designsari"
+        android:textOff="Gönder"
+        android:textOn="Gönderildi"
+        android:textColor="@color/beyaz"/>
+
+
+</RelativeLayout>

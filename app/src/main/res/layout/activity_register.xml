@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Auth.RegisterActivity"
+    android:background="@drawable/gradient">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="50dp"
+            android:paddingEnd="50dp"
+            android:paddingBottom="20dp"
+            android:paddingTop="30dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/yeni_hesap_olustur"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="30dp"
+                android:textSize="25sp"
+                android:textColor="@android:color/white"
+                />
+
+            <EditText
+                android:id="@+id/txtbx_kullanıcıadi"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:hint="@string/kullanici_ad"
+                android:textColor="@android:color/white"
+                android:textColorHint="@android:color/white"
+                android:layout_marginTop="20dp"
+                android:maxLength="@integer/kullaniciadiustsinir"
+                android:drawableStart="@drawable/userlogin"
+                android:drawablePadding="20dp"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:background="@drawable/auth_edittext"
+                />
+
+            <EditText
+                android:id="@+id/txtbx_sifre"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:hint="@string/sifre"
+                android:textColor="@android:color/white"
+                android:textColorHint="@android:color/white"
+                android:layout_marginTop="20dp"
+                android:inputType="textPassword"
+                android:maxLength="@integer/sifreustsinir"
+                android:drawableStart="@drawable/padlock"
+                android:drawablePadding="20dp"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:background="@drawable/auth_edittext"
+                />
+
+
+            <EditText
+                android:id="@+id/txtbx_sifretekrar"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:hint="@string/sifre_tekrar"
+                android:textColor="@android:color/white"
+                android:textColorHint="@android:color/white"
+                android:layout_marginTop="20dp"
+                android:inputType="textPassword"
+                android:maxLength="@integer/sifreustsinir"
+                android:drawableStart="@drawable/padlock"
+                android:drawablePadding="20dp"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:background="@drawable/auth_edittext"
+                />
+
+            <EditText
+                android:id="@+id/txtbx_email"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:hint="@string/e_mail"
+                android:textColor="@android:color/white"
+                android:textColorHint="@android:color/white"
+                android:layout_marginTop="20dp"
+                android:maxLength="@integer/emailustsinir"
+                android:drawableStart="@drawable/email"
+                android:drawablePadding="20dp"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:background="@drawable/auth_edittext"
+                />
+
+            <CheckBox
+                android:id="@+id/kullanici_sozlesmesi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:buttonTint="@color/beyaz"
+                android:textColor="@color/beyaz"
+                android:text="Kullanıcı sözleşmesini okudum. Kabul ediyorum."/>
+
+            <Button
+                android:id="@+id/bttn_kayitol"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:textAllCaps="false"
+                android:text="@string/kayit_ol"
+                android:textColor="@android:color/white"
+                android:background="@drawable/auth_button_design"
+                />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <ImageButton
+        android:id="@+id/bttn_girisyapregistersayfasi"
+        android:layout_width="47dp"
+        android:layout_height="47dp"
+        app:srcCompat="@drawable/ic_back"
+        android:background="@color/transparent" />
+
+</RelativeLayout>

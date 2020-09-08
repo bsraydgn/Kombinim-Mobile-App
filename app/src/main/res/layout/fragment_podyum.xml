@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/acikkrem">
+
+    <TextView
+        android:id="@+id/henuzkombinyok"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/acikkrem"
+        android:layout_centerInParent="true"
+        android:text="Henüz Hiç Kombin Paylaşılmamış !"
+        android:textColor="@color/siyah"
+        android:gravity="center"
+        android:textSize="15sp"
+        android:padding="5dp"
+        android:visibility="gone"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/podyum_recycview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbarSize="3dp"
+        android:scrollbarThumbVertical="@color/sarı"
+        android:scrollbars="vertical">
+    </androidx.recyclerview.widget.RecyclerView>
+
+</RelativeLayout>

@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/beyaz"
+    android:orientation="vertical"
+    tools:context=".Activities.KombinActivity">
+
+    <include
+        android:id="@+id/kombin_activity_bar"
+        layout="@layout/actionbar_app" />
+
+    <com.skhugh.simplepulltorefresh.PullToRefreshLayout
+        android:id="@+id/kombin_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/kombin_activity_bar"
+        app:refreshIconDrawable="@drawable/ic_refresh"
+        app:refreshIconSize="40dp"
+        app:refreshLayoutBackgroundColor="@color/acikkrem"
+        app:refreshLayoutMaxHeight="200dp"
+        app:refreshLayoutThresholdHeight="100dp">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/k_activity_rrr"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="8dp"
+                    android:paddingTop="5dp"
+                    android:paddingEnd="8dp"
+                    android:paddingBottom="5dp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/k_kisi_resim"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_centerVertical="true" />
+
+                    <TextView
+                        android:id="@+id/k_isim"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_toStartOf="@id/k_lsi"
+                        android:layout_toEndOf="@id/k_kisi_resim"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text=""
+                        android:textColor="@color/siyah"
+                        android:textSize="17sp" />
+
+                    <LinearLayout
+                        android:id="@+id/k_lsi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:orientation="horizontal">
+
+                        <ImageButton
+                            android:id="@+id/k_paylas"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginEnd="15dp"
+                            android:padding="5dp"
+                            android:background="?android:attr/selectableItemBackground"
+                            app:srcCompat="@drawable/ic_paylas" />
+
+                        <ImageButton
+                            android:id="@+id/k_sil"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="15dp"
+                            android:background="?android:attr/selectableItemBackground"
+                            android:padding="5dp"
+                            android:visibility="gone"
+                            app:srcCompat="@drawable/ic_yorum_sil" />
+
+                        <ImageButton
+                            android:id="@+id/k_menu"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="?android:attr/selectableItemBackground"
+                            android:padding="5dp"
+                            app:srcCompat="@drawable/ic_threedots" />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/jko"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/k_activity_rrr">
+
+                    <ImageView
+                        android:id="@+id/k_activity_kombin_resmi"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitXY" />
+
+                    <com.wang.avi.AVLoadingIndicatorView
+                        android:id="@+id/k_activity_kombin_yukleniyor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:padding="20dp"
+                        app:indicatorColor="@color/gri"
+                        app:indicatorName="LineSpinFadeLoaderIndicator" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/k_activity_aciklama_icin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/jko"
+                    android:paddingStart="10dp"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="10dp"
+                    android:paddingBottom="10dp">
+
+                    <TextView
+                        android:id="@+id/k_aciklama"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:text=""
+                        android:textColor="@color/siyah" />
+
+                    <TextView
+                        android:id="@+id/k_tarih"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/k_aciklama"
+                        android:text=""
+                        android:textColor="@color/gri"
+                        android:textSize="12sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/kaba"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/k_activity_aciklama_icin"
+                    android:background="@drawable/onlybottom"
+                    android:paddingStart="10dp"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="10dp"
+                    android:paddingBottom="10dp">
+
+                    <ImageButton
+                        android:id="@+id/k_begen"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:padding="5dp"
+                        app:srcCompat="@drawable/ic_like" />
+
+                    <TextView
+                        android:id="@+id/k_begeni_sayisi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_toEndOf="@id/k_begen"
+                        android:text=""
+                        android:textColor="@color/gri" />
+
+                    <ImageButton
+                        android:id="@+id/k_favori"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_toEndOf="@id/k_begeni_sayisi"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:padding="5dp"
+                        app:srcCompat="@drawable/ic_bookmark" />
+
+                    <TextView
+                        android:id="@+id/k_favori_sayisi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_toEndOf="@id/k_favori"
+                        android:text=""
+                        android:textColor="@color/gri" />
+
+                    <TextView
+                        android:id="@+id/k_tarz"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/listing"
+                        android:paddingStart="10dp"
+                        android:paddingTop="5dp"
+                        android:paddingEnd="10dp"
+                        android:paddingBottom="5dp"
+                        android:text=""
+                        android:textColor="@color/siyah"
+                        android:textSize="12sp"
+                        android:visibility="gone" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/kaba"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/kombin_magaza_yoksa_cikar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:visibility="gone">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:foreground="?android:attr/selectableItemBackground">
+
+                            <Button
+                                android:id="@+id/urunegit"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="end"
+                                android:background="@drawable/magazagradientdesign"
+                                android:fontFamily="sans-serif-condensed"
+                                android:gravity="center"
+                                android:drawableEnd="@drawable/ic_magazabeyazsmall"
+                                android:padding="15dp"
+                                android:drawablePadding="10dp"
+                                android:textStyle="bold"
+                                android:textAllCaps="true"
+                                android:textColor="@color/beyaz" />
+
+                        </androidx.cardview.widget.CardView>
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/begenenyoksacikar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/onlybottom"
+                        android:orientation="vertical"
+                        android:padding="10dp"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:text="Beğenenler"
+                            android:textColor="@color/gri" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/begenenlerrecycview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                        </androidx.recyclerview.widget.RecyclerView>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/favorileyenyoksacikar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/onlybottom"
+                        android:orientation="vertical"
+                        android:padding="10dp"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:text="Favorileyenler"
+                            android:textColor="@color/gri" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/favorileyenlerrecycview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                        </androidx.recyclerview.widget.RecyclerView>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/onlybottom"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:id="@+id/kombin_yorum_sayisi"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:text="Yorumlar"
+                            android:textColor="@color/gri" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="1dp"
+                            android:background="@drawable/listing"
+                            android:orientation="horizontal"
+                            android:paddingStart="5dp"
+                            android:paddingTop="5dp"
+                            android:paddingEnd="5dp"
+                            android:paddingBottom="5dp"
+                            android:weightSum="10">
+
+                            <EditText
+                                android:id="@+id/kombin_yorumyazmaedit"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginEnd="5dp"
+                                android:layout_weight="8.5"
+                                android:background="@color/beyaz"
+                                android:hint="Yorum yapın..."
+                                android:maxLength="@integer/yorumsinir"
+                                android:paddingStart="20dp"
+                                android:paddingEnd="20dp"
+                                android:textColor="@android:color/black"
+                                android:textColorHint="@color/gri" />
+
+                            <ImageButton
+                                android:id="@+id/kombin_yorumgonderımgbtn"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1.5"
+                                android:background="@drawable/listingdesign"
+                                android:padding="8dp"
+                                app:srcCompat="@drawable/ic_sendturuncu" />
+
+                        </LinearLayout>
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/k_yorumlarrecycview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                        </androidx.recyclerview.widget.RecyclerView>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </ScrollView>
+
+    </com.skhugh.simplepulltorefresh.PullToRefreshLayout>
+
+</RelativeLayout>

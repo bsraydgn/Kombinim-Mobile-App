@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_anasayfa"
+        android:icon="@drawable/ic_anasayfa"
+        android:title="Ana Sayfa" />
+
+    <item
+        android:id="@+id/navigation_kesfet"
+        android:icon="@drawable/ic_search"
+        android:title="Keşfet" />
+
+    <item
+        android:id="@+id/navigation_olustur"
+        android:icon="@drawable/ic_olustur"
+        android:title="Oluştur" />
+
+    <item
+        android:id="@+id/navigation_arkadaslar"
+        android:icon="@drawable/ic_bildirim"
+        android:title="Bildirimler" />
+
+    <item
+        android:id="@+id/navigation_profilim"
+        android:icon="@drawable/ic_profilim"
+        android:title="Profilim" />
+
+</menu>

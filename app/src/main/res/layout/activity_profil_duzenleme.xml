@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient"
+    tools:context=".Activities.ProfilDuzenlemeActivity">
+
+    <include
+        android:id="@+id/profilduzenlemeactionbar"
+        layout="@layout/actionbar_app" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/profilduzenlemekaydet"
+        android:layout_below="@id/profilduzenlemeactionbar"
+        android:layout_marginBottom="5dp"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <RelativeLayout
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center_horizontal">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/profilduzenlemeresmim"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:background="@drawable/profil_foto_cember"
+                    android:foregroundGravity="center"
+                    android:padding="6dp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentEnd="true"
+                    android:padding="10dp"
+                    android:background="@drawable/buton_designsari"
+                    app:srcCompat="@drawable/ic_edit"/>
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="30dp"
+                android:text="Kullanıcı Adı"
+                android:textColor="@color/beyaz" />
+
+            <EditText
+                android:id="@+id/profilduzenlemekullaniciadim"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/auth_edittext"
+                android:drawableStart="@drawable/userlogin"
+                android:drawablePadding="10dp"
+                android:maxLength="@integer/kullaniciadiustsinir"
+                android:paddingStart="20dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="10dp"
+                android:textColor="@color/beyaz" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="30dp"
+                android:text="Durum"
+                android:textColor="@color/beyaz" />
+
+            <EditText
+                android:id="@+id/profilduzenlemedurum"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/auth_edittext"
+                android:drawableStart="@drawable/quotes"
+                android:drawablePadding="10dp"
+                android:maxLength="@integer/durumustsınır"
+                android:paddingStart="20dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="10dp"
+                android:textColor="@color/beyaz" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="30dp"
+                android:text="Hakkımda"
+                android:textColor="@color/beyaz" />
+
+            <EditText
+                android:id="@+id/profilduzenlemehakkimda"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/auth_edittext"
+                android:drawableStart="@drawable/ic_hakkimda"
+                android:drawablePadding="10dp"
+                android:maxLength="@integer/hakkimda"
+                android:paddingStart="20dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="10dp"
+                android:textColor="@color/beyaz" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="30dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Profil Görünürlüğü :"
+                    android:textColor="@color/beyaz" />
+
+                <Switch
+                    android:id="@+id/profilduzenlemegizlihesapmi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:textColorHint="@color/sarı" />
+
+                <TextView
+                    android:id="@+id/profilduzenlemegizliacikkapali"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:text="Açık"
+                    android:textColor="@color/beyaz" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/profilduzenlemekaydet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/auth_button_design"
+        android:text="Kaydet"
+        android:textColor="@color/beyaz"
+        android:textAllCaps="false" />
+
+</RelativeLayout>

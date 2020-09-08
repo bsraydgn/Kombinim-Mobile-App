@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.kombinim">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <application
+        android:name=".AppTemel.Kombinim"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/ic_notification_icon" />
+        <meta-data android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/sarı" />
+        <service android:name=".AppTemel.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <meta-data
+            android:name="com.google.android.gms.ads.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name=".Activities.UygulamaHakkinda.UygulamaHakkindaActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.UygulamaHakkinda.YardimHataActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.KombinActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.MesajActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.SohbetlerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.UsersProfileActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.ProfilDuzenlemeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".BaslaActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Auth.LoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Auth.RegisterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Base.Theme.AppCompat" />
+    </application>
+
+</manifest>

@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "296956041506",
+    "firebase_url": "https://kombinim-d2430.firebaseio.com",
+    "project_id": "kombinim-d2430",
+    "storage_bucket": "kombinim-d2430.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:296956041506:android:168efa6ddcb06d71",
+        "android_client_info": {
+          "package_name": "com.example.kombinim"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "296956041506-3a64sjri6ufd09q6m8efmuujur7dot95.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.kombinim",
+            "certificate_hash": "432df2d25d6965c0b2dae2fea5c47486de4ef779"
+          }
+        },
+        {
+          "client_id": "296956041506-ien9kvd9a9rtgdqojdqp03tlaht6rlto.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBZ0gmpLQx1mUmEpwBNngomXTM5Xjcszsg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "296956041506-ien9kvd9a9rtgdqojdqp03tlaht6rlto.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

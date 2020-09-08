@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.MesajActivity"
+    android:background="@color/beyaz">
+
+    <include layout="@layout/actionbar_mesaj"
+        android:id="@+id/actionbar_mesaj_ekran"/>
+
+    <com.skhugh.simplepulltorefresh.PullToRefreshLayout
+        android:id="@+id/mesaj_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:refreshIconDrawable="@drawable/ic_refresh"
+        app:refreshIconSize="40dp"
+        app:refreshLayoutMaxHeight="200dp"
+        app:refreshLayoutThresholdHeight="100dp"
+        app:refreshLayoutBackgroundColor="@color/acikkrem"
+        android:layout_below="@id/actionbar_mesaj_ekran"
+        android:layout_above="@id/mesajetkilesimleri">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/mesajrecycview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/acikkrem"
+            android:scrollbars="vertical"
+            android:scrollbarThumbVertical="@color/sarı"
+            android:scrollbarSize="3dp"/>
+
+    </com.skhugh.simplepulltorefresh.PullToRefreshLayout>
+
+    <LinearLayout
+        android:id="@+id/mesajetkilesimleri"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:background="@color/sarı"
+        android:weightSum="10">
+
+        <EditText
+            android:id="@+id/mesajyazmaedit"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="@color/sarı"
+            android:layout_weight="8"
+            android:hint="Mesajını yaz..."
+            android:textColor="@color/beyaz"
+            android:maxLength="@integer/yorumsinir"
+            android:layout_gravity="center_vertical"
+            android:textColorHint="@color/beyaz"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:layout_marginEnd="5dp"/>
+
+        <ImageButton
+            android:id="@+id/mesajgonderımgbtn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/ic_send"
+            android:padding="8dp"
+            android:layout_weight="2"
+            android:background="@drawable/sadecesaributon"
+            />
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:padding="10dp"
+    android:background="@drawable/auth_edittext_radius">
+
+    <ImageView
+        android:id="@+id/profil_foto_view"
+        android:layout_width="280dp"
+        android:layout_height="280dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/auth_edittext"
+        android:padding="1dp"
+        android:layout_marginBottom="10dp"/>
+
+    <Button
+        android:id="@+id/profil_foto_kapat"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/profil_foto_view"
+        android:background="@drawable/edittexticinbtndesign"
+        android:text="Kapat"
+        android:textColor="@color/beyaz"
+        android:textAllCaps="false"
+        />
+
+</RelativeLayout>

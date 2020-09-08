@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/acikkrem">
+
+    <com.skhugh.simplepulltorefresh.PullToRefreshLayout
+        android:id="@+id/bildirimrefresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:refreshIconDrawable="@drawable/ic_refresh"
+        app:refreshIconSize="40dp"
+        app:refreshLayoutBackgroundColor="@color/acikkrem"
+        app:refreshLayoutMaxHeight="200dp"
+        android:layout_above="@id/bildirim_sonundaysa_goster"
+        app:refreshLayoutThresholdHeight="100dp">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/bildirimlerrecycview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="1dp"
+                android:scrollbarSize="3dp"
+                android:scrollbarThumbVertical="@color/sarı"
+                android:scrollbars="vertical" />
+
+    </com.skhugh.simplepulltorefresh.PullToRefreshLayout>
+
+    <TextView
+        android:id="@+id/henuzbildirimyok"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@color/acikkrem"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="Henüz Hiç Bildirim Yok !"
+        android:textColor="@color/siyah"
+        android:textSize="15sp"
+        android:visibility="gone" />
+
+    <ImageButton
+        android:id="@+id/bildirimlerisil"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="15dp"
+        android:background="@drawable/buton_designsari"
+        android:visibility="gone"
+        app:srcCompat="@drawable/ic_clear" />
+
+    <RelativeLayout
+        android:id="@+id/bildirim_sonundaysa_goster"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/krem"
+        android:padding="5dp"
+        android:visibility="gone">
+
+        <com.wang.avi.AVLoadingIndicatorView
+            android:id="@+id/bildirim_sonundaysa_progress"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerInParent="true"
+            app:indicatorColor="@color/sarı" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

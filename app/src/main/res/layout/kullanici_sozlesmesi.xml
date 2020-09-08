@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient">
+
+    <TextView
+        android:id="@+id/k_s_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Kullanıcı Sözleşmesi"
+        android:textColor="@color/beyaz"
+        android:textStyle="bold"
+        android:padding="10dp"
+        android:textSize="25sp"
+        android:gravity="center"
+        android:background="@color/sarı"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/k_s_text"
+        android:layout_above="@id/k_s_buttons"
+        android:background="@color/login_form_light">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/beyaz"
+            android:textSize="15sp"
+            android:text="Buraya sözleşme gelecek..."
+            android:padding="5dp"/>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/k_s_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="end"
+        android:layout_alignParentBottom="true"
+        android:background="@color/sarı"
+        android:weightSum="2"
+        android:padding="5dp">
+
+        <Button
+            android:id="@+id/sozlesme_kapat"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/sadecesaributon"
+            android:text="Kapat"
+            android:textColor="@color/beyaz"
+            android:layout_marginEnd="5dp"
+            android:padding="5dp"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"/>
+
+        <Button
+            android:id="@+id/sozlesme_kabul"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/sadecesaributon"
+            android:text="Kabul Ediyorum"
+            android:textColor="@color/beyaz"
+            android:layout_weight="1"
+            android:padding="5dp"
+            android:layout_gravity="center_vertical"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

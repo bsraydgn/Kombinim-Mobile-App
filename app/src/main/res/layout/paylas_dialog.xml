@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/mesajicinshape"
+    android:padding="5dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/onlybottom"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <View
+                android:layout_width="25dp"
+                android:layout_height="7dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@drawable/mesajicinshape" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Kombini Paylaş"
+                android:textColor="@color/sarı"
+                android:textSize="15sp"
+                android:textStyle="normal" />
+
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/paylas_dialog_ara"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/onlybottom"
+            android:drawableStart="@drawable/ic_search_gri"
+            android:drawablePadding="10dp"
+            android:hint="Ara"
+            android:padding="10dp"
+            android:textColor="@color/siyah"
+            android:textColorHint="@color/gri" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/paylas_dialog_ark_liste"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

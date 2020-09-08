@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="45dp"
+    android:background="@color/sarı"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+    <ImageButton
+        android:id="@+id/mesaj_back"
+        android:layout_width="45dp"
+        android:layout_height="match_parent"
+        android:padding="5dp"
+        app:srcCompat="@drawable/ic_back"
+        android:background="@drawable/sadecesaributon"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/mesajtoolbarresim"
+        android:layout_width="45dp"
+        android:padding="5dp"
+        android:layout_toEndOf="@id/mesaj_back"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true" />
+
+    <TextView
+        android:id="@+id/mesajtoolbarismi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_toStartOf="@id/mesajmenu"
+        android:layout_toEndOf="@id/mesajtoolbarresim"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text=""
+        android:textColor="@color/beyaz"
+        android:textSize="20sp" />
+
+    <ImageButton
+        android:id="@+id/mesajmenu"
+        android:layout_width="45dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/sadecesaributon"
+        app:srcCompat="@drawable/ic_three_dots_white" />
+
+</RelativeLayout>

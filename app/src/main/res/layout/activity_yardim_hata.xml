@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient"
+    tools:context=".Activities.UygulamaHakkinda.YardimHataActivity">
+
+    <include
+        android:id="@+id/actionbaryardim"
+        layout="@layout/actionbar_app" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/actionbaryardim"
+        android:layout_margin="20dp"
+        android:background="@color/transparent"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Yardım / Hata Bildir *"
+            android:textColor="@color/beyaz" />
+
+        <EditText
+            android:id="@+id/yardimbildirim"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/beyaz"
+            android:background="@drawable/auth_edittext"
+            android:maxLength="@integer/yardimuzunlugu"
+            android:padding="5dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="E - Posta Adresiniz *"
+            android:textColor="@color/beyaz" />
+
+        <EditText
+            android:id="@+id/yardimeposta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/beyaz"
+            android:background="@drawable/auth_edittext"
+            android:maxLength="@integer/emailustsinir"
+            android:padding="5dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Geri Bildirim Türü *"
+            android:textColor="@color/beyaz" />
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/auth_edittext"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <RadioButton
+                android:id="@+id/yardimradioyardim"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:buttonTint="@color/beyaz"
+                android:text="Yardım"
+                android:textColor="@color/beyaz" />
+
+            <RadioButton
+                android:id="@+id/yardimradiooneri"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:buttonTint="@color/beyaz"
+                android:text="Öneri"
+                android:textColor="@color/beyaz" />
+
+            <RadioButton
+                android:id="@+id/yardimradiohata"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:buttonTint="@color/beyaz"
+                android:text="Hata"
+                android:textColor="@color/beyaz" />
+
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="* Geri bildiriminiz ve e-posta adresiniz destek ekibimize gönderilecek. Destek ekibimiz e-postanız üzerinizden sizinle iletişime geçecektir. Eğer bir hata mesajı alırsanız lütfen hatadan hemen sonra bize bildirin. İlginize teşekkürler."
+            android:textColor="@color/beyaz"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/yardimgonder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center"
+        android:background="@drawable/auth_button_design"
+        android:layout_margin="20dp">
+
+        <com.wang.avi.AVLoadingIndicatorView
+            android:id="@+id/progress_paylas_yardim"
+            style="@style/AVLoadingIndicatorView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone"
+            app:indicatorColor="@color/beyaz"/>
+
+        <TextView
+            android:id="@+id/text_paylas_yardim"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"
+            android:layout_centerInParent="true"
+            android:padding="17dp"
+            android:textColor="@color/beyaz"
+            android:gravity="center"
+            android:text="Gönder"
+            android:textAllCaps="false" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

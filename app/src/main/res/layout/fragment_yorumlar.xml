@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/acikkrem">
+
+    <TextView
+        android:id="@+id/henuzyorumyok"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/acikkrem"
+        android:text="Henüz Hiç Yorum Yapılmamış !"
+        android:textColor="@color/siyah"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:textSize="15sp"
+        android:padding="5dp"
+        android:visibility="gone"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/yorumrecycview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/yorumetkilesimleri"
+        android:scrollbarSize="3dp"
+        android:scrollbarThumbVertical="@color/sarı"
+        android:scrollbars="vertical">
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <LinearLayout
+        android:id="@+id/yorumetkilesimleri"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:background="@color/sarı"
+        android:weightSum="10"
+        android:visibility="gone">
+
+        <EditText
+            android:id="@+id/yorumyazmaedit"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="@color/sarı"
+            android:layout_weight="8"
+            android:hint="Yorum yapın..."
+            android:textColor="@color/beyaz"
+            android:maxLength="@integer/yorumsinir"
+            android:layout_gravity="center_vertical"
+            android:textColorHint="@color/beyaz"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:layout_marginEnd="5dp"/>
+
+        <ImageButton
+            android:id="@+id/yorumgonderımgbtn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/ic_send"
+            android:padding="8dp"
+            android:layout_weight="2"
+            android:background="@drawable/sadecesaributon"
+            />
+
+    </LinearLayout>
+
+</RelativeLayout>

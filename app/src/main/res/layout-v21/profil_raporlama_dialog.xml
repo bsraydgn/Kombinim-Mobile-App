@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/tarzicinshape"
+    android:padding="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageButton
+            android:id="@+id/profilraporkapat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:background="@drawable/edittexticinbtndesign"
+            app:srcCompat="@drawable/ic_close"
+            android:padding="3dp"
+            android:layout_marginBottom="6dp"/>
+
+        <CheckBox
+            android:id="@+id/profilraporspam"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/siyah"
+            android:text="Spam"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/auth_edittext_radius"
+            android:buttonTint="@color/siyah"
+            android:padding="10dp"
+            android:layout_marginBottom="3dp"
+            android:checked="false"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/auth_edittext_radius"
+            android:layout_marginBottom="3dp">
+
+            <CheckBox
+                android:id="@+id/profilrapordiger"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Diğer..."
+                android:textColor="@color/siyah"
+                android:layout_gravity="center_horizontal"
+                android:buttonTint="@color/siyah"
+                android:padding="10dp"
+                android:checked="false"/>
+
+            <EditText
+                android:id="@+id/profilraporsebep"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Sebep belirtin..."
+                android:textColor="@color/siyah"
+                android:background="@color/transparent"
+                android:textColorHint="@color/aciksiyah"
+                android:padding="10dp"
+                android:textSize="15sp"
+                android:enabled="false"
+                android:maxLength="@integer/raporsebebi"/>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/profilraporgonder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Gönder"
+            android:textColor="@color/beyaz"
+            android:textAllCaps="false"
+            android:background="@drawable/edittexticinbtndesign"
+            android:enabled="false"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

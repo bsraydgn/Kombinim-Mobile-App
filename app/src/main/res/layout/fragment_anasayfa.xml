@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/acikkrem">
+
+    <TextView
+        android:id="@+id/gosterilecekbirkombinyok"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/acikkrem"
+        android:text="Görüntülenecek Kombin Yok. Daha Fazla Arkadaş Edinmelisin !"
+        android:textColor="@color/siyah"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:textSize="15sp"
+        android:padding="5dp"
+        android:visibility="gone"/>
+
+    <com.skhugh.simplepulltorefresh.PullToRefreshLayout
+        android:id="@+id/anasayfarefresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:refreshIconDrawable="@drawable/ic_refresh"
+        app:refreshIconSize="40dp"
+        app:refreshLayoutMaxHeight="200dp"
+        app:refreshLayoutThresholdHeight="100dp"
+        app:refreshLayoutBackgroundColor="@color/acikkrem">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/anasayfarecycview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical"
+            android:background="@color/transparent"
+            android:scrollbarThumbVertical="@color/sarı"
+            android:scrollbarSize="3dp"/>
+
+    </com.skhugh.simplepulltorefresh.PullToRefreshLayout>
+
+</RelativeLayout>
